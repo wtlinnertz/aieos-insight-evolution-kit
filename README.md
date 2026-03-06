@@ -66,5 +66,5 @@ The ES is not time-pressure-driven — it is value-driven. Run it when there is 
 
 - Playbook: `docs/playbook.md`
 - Documentation index: `docs/index.md`
-- AIEOS layer model: `aieos-spec/docs/layer-model.md`
+- AIEOS layer model: `aieos-governance-foundation/docs/layer-model.md`
 - Governance model: `docs/governance-model.md`

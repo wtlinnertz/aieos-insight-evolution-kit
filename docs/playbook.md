@@ -153,13 +153,13 @@ When a frozen ES must change (rare — this is a terminal synthesis artifact):
 
 When a service is decommissioned, a frozen ES for that service transitions to `Deprecated`. If a discovery engagement was initiated based on an ES's `re-discover` signal and that initiative is subsequently cancelled, the ES itself may remain Frozen — the ES is evidence of the insight, not the initiative.
 
-See `aieos-spec/docs/deprecation-protocol.md` for the full Deprecation Notice process.
+See `aieos-governance-foundation/docs/deprecation-protocol.md` for the full Deprecation Notice process.
 
 ---
 
 ## Maintaining the Engagement Record
 
-The Engagement Record (ER) is a project-level artifact that lives in the consuming project at `docs/engagement/er-{initiative}.md`. It spans all AIEOS layers and is maintained by each kit's operators as work passes through. The ER spec and format are defined in `aieos-spec/docs/engagement-record-spec.md`.
+The Engagement Record (ER) is a project-level artifact that lives in the consuming project at `docs/engagement/er-{initiative}.md`. It spans all AIEOS layers and is maintained by each kit's operators as work passes through. The ER spec and format are defined in `aieos-governance-foundation/docs/engagement-record-spec.md`.
 
 **IEK maintains the Layer 7 section of the ER and sets the final Initiative Outcome.**
 
@@ -183,7 +183,7 @@ When issuing a Deprecation Notice: update §1 Status to `Deprecated` and add the
 
 ## Principle File Revision
 
-When the principle file in `docs/principles/` changes, use the change categories defined in `aieos-spec/docs/principle-file-standard.md`:
+When the principle file in `docs/principles/` changes, use the change categories defined in `aieos-governance-foundation/docs/principle-file-standard.md`:
 
 | Change Category | Version Bump | Re-Entry Impact |
 |----------------|-------------|-----------------|

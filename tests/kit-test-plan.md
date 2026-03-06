@@ -84,11 +84,11 @@ Structural checks verify that the kit's files are present, properly named, and i
 
 ### S-07: Governance Model Sync
 
-**Check:** `docs/governance-model.md` matches `aieos-spec/governance-model.md` exactly (byte-for-byte).
+**Check:** `docs/governance-model.md` matches `aieos-governance-foundation/governance-model.md` exactly (byte-for-byte).
 
 **Procedure:** Diff the two files. Any difference is a sync failure.
 
-**Expected result:** Zero diff between kit copy and aieos-spec canonical.
+**Expected result:** Zero diff between kit copy and aieos-governance-foundation canonical.
 
 ---
 
@@ -192,5 +192,5 @@ Flow scenarios verify that the kit's artifacts, when produced in order with appr
 
 - All structural checks (S-01 through S-09) should be verified before running flow scenarios.
 - Run flow scenarios in separate AI sessions for generation and validation — do not validate in the same session that generated the artifact.
-- The check-structure.sh script in `aieos-spec/tests/` can validate structural checks S-01 through S-06 automatically.
-- F-02 requires Engagement Records as input. Use the ER format from `aieos-spec/docs/engagement-record-spec.md` to construct test ERs if working ERs are not available.
+- The check-structure.sh script in `aieos-governance-foundation/tests/` can validate structural checks S-01 through S-06 automatically.
+- F-02 requires Engagement Records as input. Use the ER format from `aieos-governance-foundation/docs/engagement-record-spec.md` to construct test ERs if working ERs are not available.

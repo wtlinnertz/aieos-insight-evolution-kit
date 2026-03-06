@@ -115,6 +115,6 @@ The `docs/principles/insight-evolution-principles.md` file defines your organiza
 To adapt it:
 1. Update the thresholds in §1 (Pattern Recognition Standards) to match your organization's risk tolerance.
 2. Update §2 (Feedback Loop Governance) to reflect your re-entry decision-making process.
-3. Bump the version field per the principle file versioning protocol (`aieos-spec/docs/principle-file-standard.md`).
+3. Bump the version field per the principle file versioning protocol (`aieos-governance-foundation/docs/principle-file-standard.md`).
 
 Do not remove the enforcement mapping at the end of the principles file — it documents how the principles connect to the kit's hard gates.
