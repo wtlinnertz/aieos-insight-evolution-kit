@@ -47,6 +47,7 @@ None. The ES prompt handles all generation logic including input validation.
 - **VH assessment is mandatory** — §3 must be explicitly addressed or explicitly deferred; blank is not accepted
 - **Re-entry signal is advisory** — `re-discover` produces a PIK intake recommendation, not automatic re-entry
 - **Governance model sync** — `docs/governance-model.md` is a synchronized copy of `aieos-spec/governance-model.md` (canonical authority). Do not edit kit copy directly; update `aieos-spec` first, then sync all kit copies to match exactly. See governance-model.md §15 for versioning and change protocol.
+- **Engagement Record** — IEK maintains the Layer 7 section of the project's ER and sets the final Initiative Outcome after the ES is frozen. See `docs/playbook.md §Maintaining the Engagement Record` and `aieos-spec/docs/engagement-record-spec.md`.
 
 ## Artifact Flow
 

@@ -157,6 +157,30 @@ See `aieos-spec/docs/deprecation-protocol.md` for the full Deprecation Notice pr
 
 ---
 
+## Maintaining the Engagement Record
+
+The Engagement Record (ER) is a project-level artifact that lives in the consuming project at `docs/engagement/er-{initiative}.md`. It spans all AIEOS layers and is maintained by each kit's operators as work passes through. The ER spec and format are defined in `aieos-spec/docs/engagement-record-spec.md`.
+
+**IEK maintains the Layer 7 section of the ER and sets the final Initiative Outcome.**
+
+### What to Update When an ES is Frozen
+
+| Trigger | ER update |
+|---------|-----------|
+| ES frozen | Add ES ID to §6 table with coverage period, re-entry signal, and VH verdict |
+| PES produced that includes this initiative | Note the PES ID in §6 |
+
+After adding the ES to §6, update §7 Initiative Outcome:
+- Set `Final Re-Entry Signal` to the ES §6 signal
+- Set `Final VH Verdict` to the ES §3 overall verdict
+- If signal is `re-discover`, add a note in §7 with the discovery question from ES §6
+
+### On Service End
+
+When issuing a Deprecation Notice: update §1 Status to `Deprecated` and add the DN ID to §7 Initiative Outcome. If no ES has been produced before decommission, note "No ES produced" in §7 Final Re-Entry Signal.
+
+---
+
 ## Principle File Revision
 
 When the principle file in `docs/principles/` changes, use the change categories defined in `aieos-spec/docs/principle-file-standard.md`:
