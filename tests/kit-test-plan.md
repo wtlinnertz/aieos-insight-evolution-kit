@@ -94,13 +94,26 @@ Structural checks verify that the kit's files are present, properly named, and i
 
 ### S-08: Example Artifact Coverage
 
-**Check:** The worked example covers the ES artifact type with a corresponding validator output.
+**Check:** The worked examples cover both artifact types with corresponding validator outputs.
 
 | Example File | Artifact Type | Validator Output |
 |-------------|---------------|----------------|
 | examples/basic-evolution/00-evolution-signal.md | ES | validator-outputs/es-pass.json |
+| examples/portfolio-evolution/00-portfolio-evolution-signal.md | PES | validator-outputs/pes-pass.json |
 
-**Expected result:** ES example present; validator output present with status: PASS.
+**Expected result:** Both examples present; both validator outputs present with status: PASS.
+
+---
+
+### S-09: PES Four-File Completeness
+
+**Check:** The PES artifact type has exactly four files: spec, template, prompt, validator.
+
+| Artifact Type | Spec | Template | Prompt | Validator |
+|---------------|------|----------|--------|-----------|
+| PES | docs/specs/pes-spec.md | docs/artifacts/pes-template.md | docs/prompts/pes-prompt.md | docs/validators/pes-validator.md |
+
+**Expected result:** All four files present.
 
 ---
 
@@ -153,8 +166,31 @@ Flow scenarios verify that the kit's artifacts, when produced in order with appr
 
 ---
 
+### F-02: Portfolio Evolution Flow (evidence-grounded proposal)
+
+**Scenario:** Receive 3 Engagement Records with completed ES entries → generate Portfolio Evolution Signal → validate. PES produces one improvement proposal grounded in a cross-initiative pattern.
+
+**Setup:**
+- Provide: ER-TASKFLOW-NOTIF-001, ER-TASKFLOW-ATTACH-001, ER-TASKFLOW-FEED-001 (all Active, all with ES §6 signals)
+- Provide: ES-NOTIFICATION-SVC-001, ES-ATTACH-SVC-001, ES-FEED-SVC-001 (all Frozen)
+- Load pes-prompt.md + pes-spec.md + pes-template.md
+- Generate PES → validate
+
+**Expected outcomes:**
+- PES: all 5 hard gates PASS
+- §2: 3 rows in engagement coverage summary
+- §3: VH verdict distribution table present; SM category analysis table present; at least one pattern finding cites specific ER or ES IDs
+- §4: SLO miss pattern table present; first-period vulnerability finding present with numeric basis
+- §5: assumption category breakdown table present; under-validated categories identified with ER citations
+- §6: at least one improvement proposal with all four fields populated; Affected File is a specific path; Observed Pattern cites a §3–§5 section and finding; Proposed Change is concrete and implementable
+
+**Key gate to verify:** `patterns_evidence_based` — confirm that §3 Finding 1 cites specific ER IDs and a count ("all 3 churn/retention metrics"), not a vague generalization. `proposals_complete` — confirm the Affected File is `docs/prompts/es-prompt.md` (or equivalent specific path), not a generic reference.
+
+---
+
 ## Notes
 
-- All structural checks (S-01 through S-08) should be verified before running flow scenarios.
+- All structural checks (S-01 through S-09) should be verified before running flow scenarios.
 - Run flow scenarios in separate AI sessions for generation and validation — do not validate in the same session that generated the artifact.
 - The check-structure.sh script in `aieos-spec/tests/` can validate structural checks S-01 through S-06 automatically.
+- F-02 requires Engagement Records as input. Use the ER format from `aieos-spec/docs/engagement-record-spec.md` to construct test ERs if working ERs are not available.
