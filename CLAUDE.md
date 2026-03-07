@@ -63,7 +63,7 @@ Evolution Signal → validate → freeze
 
 ## Boundary Contracts
 
-- **Upstream:** Receives frozen Reliability Health Reports from the Reliability & Resilience Kit (Layer 6). Minimum 2 frozen RHRs required. The RHR §5 Layer 7 Feed section is the primary upstream input. Additional optional input: frozen Value Hypothesis from PIK (Layer 2).
+- **Upstream:** Receives frozen Reliability Health Reports from the Reliability & Resilience Kit (Layer 6). Minimum 2 frozen RHRs required. The RHR §5 Layer 7 Feed section is the primary upstream input. Additional optional input: frozen Value Hypothesis from PIK (Layer 2). See `docs/entry-from-rrk.md` for the boundary briefing.
 - **Downstream:** Produces a frozen Evolution Signal. If re-entry signal is `re-discover`, the ES §6 rationale and §7 recommended actions inform a Product Intelligence Kit Discovery Intake Form. The product owner decides whether to initiate a new discovery engagement.
 
 ## Artifact ID Formats
@@ -85,8 +85,11 @@ Evolution Signal → validate → freeze
 - Read the playbook (`docs/playbook.md`) for the full process definition
 - Read the governance model (`docs/governance-model.md`) for structural rules
 - Check `docs/how-to-use-with-ai.md` for session setup instructions
+- Use `docs/session-setup.md` for per-artifact setup checklists and pre-flight gate checks
+- Use `docs/troubleshooting.md` when a validator returns FAIL — maps each gate failure to a specific remediation
 - Reference `examples/basic-evolution/` for an ES worked example
 - Reference `examples/portfolio-evolution/` for a PES worked example
+- Arriving from RRK with ≥2 frozen RHRs: see `docs/entry-from-rrk.md` for the boundary briefing
 
 ## Building or Auditing AIEOS Kits
 

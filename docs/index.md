@@ -63,3 +63,13 @@ Cross-initiative synthesis. Inputs: ≥2 frozen Engagement Records + optional in
 | File | Contents |
 |------|----------|
 | `tests/kit-test-plan.md` | Structural integrity checks (S-01 to S-09) + flow scenarios (F-00 to F-02) |
+
+---
+
+## Guides
+
+| Document | Purpose |
+|----------|---------|
+| `session-setup.md` | Per-artifact setup checklists, pre-flight gate checks, and common failure reminders |
+| `troubleshooting.md` | Gate failure remediation guide |
+| `entry-from-rrk.md` | Boundary briefing when arriving from the Reliability & Resilience Kit |
