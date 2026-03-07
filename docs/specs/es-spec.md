@@ -19,6 +19,14 @@ The ES closes the Layer 6 → Layer 7 → Layer 2 feedback loop.
 
 ---
 
+## What This Artifact Is Not
+
+- **Not a performance review or accountability document.** The ES is a reliability trend signal. It assesses how the system performed against its value bets and SLOs — not the team that built or operates it. It recommends; it does not require action.
+- **Not an incident postmortem.** Individual incident analysis belongs in the IR and ODK PMR. The ES synthesizes patterns across the coverage period; it does not re-litigate individual incidents.
+- **Not a binding decision.** The re-entry signal (`maintain` / `watch` / `re-discover`) is advisory. The decision to initiate new discovery based on the ES is made by product and engineering leadership — not the ES itself.
+
+---
+
 ## 2. Input Requirements
 
 ### Required Inputs

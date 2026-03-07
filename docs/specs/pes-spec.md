@@ -18,6 +18,14 @@ The PES closes the cognitive loop: observed patterns → improvement proposals �
 
 ---
 
+## What This Artifact Is Not
+
+- **Not a strategic roadmap or organizational diagnosis.** The PES synthesizes observed patterns across initiatives into improvement proposals for governing prompts and specs — not organizational recommendations, headcount decisions, or product strategy.
+- **Not a performance review.** The PES identifies patterns in value bets, reliability, and assumptions across the portfolio. It does not evaluate teams, individuals, or specific product decisions.
+- **Not a substitute for individual ESes.** The PES provides cross-initiative pattern synthesis; it does not replace or summarize individual Evolution Signals. Both operate at different scopes.
+
+---
+
 ## 2. Input Requirements
 
 ### Required Inputs
