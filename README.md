@@ -17,11 +17,15 @@ The Insight & Evolution Kit takes frozen Reliability Health Reports (from Layer 
 
 The Evolution Signal closes the loop: Layer 7 → Layer 2 (Product Intelligence).
 
+The Portfolio Evolution Signal synthesizes patterns across multiple initiatives from their Engagement Records, producing cross-initiative improvement proposals for the governing artifact files.
+
 ---
 
-## Single Artifact Type
+## Artifact Types
 
-**Evolution Signal (ES)** — the only governed artifact in this kit.
+### Evolution Signal (ES)
+
+Per-service synthesis. Inputs: ≥2 frozen RHRs + optional frozen VH. ID format: `ES-{SCOPE}-{NNN}`.
 
 | File | Purpose |
 |------|---------|
@@ -29,6 +33,17 @@ The Evolution Signal closes the loop: Layer 7 → Layer 2 (Product Intelligence)
 | `docs/artifacts/es-template.md` | ES structure |
 | `docs/prompts/es-prompt.md` | Generation instructions |
 | `docs/validators/es-validator.md` | Pass/fail evaluation |
+
+### Portfolio Evolution Signal (PES)
+
+Cross-initiative synthesis. Inputs: ≥2 frozen Engagement Records + optional individual ESes. Produces improvement proposals for governing prompt and spec files. ID format: `PES-{NNN}`.
+
+| File | Purpose |
+|------|---------|
+| `docs/specs/pes-spec.md` | Content rules and 5 hard gates |
+| `docs/artifacts/pes-template.md` | PES structure |
+| `docs/prompts/pes-prompt.md` | Generation instructions |
+| `docs/validators/pes-validator.md` | Pass/fail evaluation |
 
 ---
 
