@@ -1,5 +1,7 @@
 # Evolution Signal Spec
 
+Version: v1.0
+
 ## Purpose
 
 This spec defines the content rules, format requirements, and hard gates for the Evolution Signal (ES). It is the single source of truth for what constitutes a valid ES. The ES prompt and ES validator reference this spec — they never inline their own rules.
