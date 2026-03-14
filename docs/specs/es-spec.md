@@ -1,6 +1,6 @@
 # Evolution Signal Spec
 
-Version: v1.0
+Version: v1.1
 
 ## Purpose
 
@@ -123,7 +123,22 @@ A table with at least one row. Columns: Action, Type (Operational / Discovery / 
 
 Owner may be "TBD" if not yet assigned.
 
-### §8 Freeze Declaration
+### §8 Adoption Evidence
+
+If the initiative delivered a user-facing capability, this section captures whether users actually adopted it. This is not a strategic assessment (that belongs in §3 VH Outcome) — it is an operational observation of usage patterns.
+
+Must contain:
+
+- **Usage metrics** — Key usage indicators for the capability (e.g., daily active users, transaction volume, feature activation rate). Source and measurement method must be stated.
+- **Adoption rate** — Current adoption as a percentage of the target user base, with the target base defined. If adoption tracking is not instrumented, state "Adoption tracking not available" with an explanation.
+- **Adoption trend** — Increasing / Stable / Declining, based on the coverage period data.
+- **Support signal** — Support ticket trends related to the capability (volume, categories). Use "No support data available" if not tracked.
+
+If the initiative did not deliver a user-facing capability (e.g., infrastructure migration, backend optimization), write: "Not applicable — initiative has no user-facing capability."
+
+Blank is not accepted. The section must be explicitly addressed or explicitly marked not applicable.
+
+### §9 Freeze Declaration
 
 Standard freeze declaration confirming the ES is complete, inputs are frozen, and the document is ready for validation.
 
@@ -131,7 +146,7 @@ Standard freeze declaration confirming the ES is complete, inputs are frozen, an
 
 ## 4. Hard Gates
 
-Five hard gates govern this artifact. All five must PASS for the validator to return PASS.
+Six hard gates govern this artifact. All six must PASS for the validator to return PASS.
 
 ### Gate 1: `coverage_adequacy`
 
@@ -162,6 +177,12 @@ Five hard gates govern this artifact. All five must PASS for the validator to re
 **Description:** §7 contains at least one recommended action with: an action description, a type (Operational / Discovery / Engineering), a rationale, and an owner (which may be "TBD").
 
 **Failure condition:** §7 is empty or contains only placeholder text; an action row is missing its type, rationale, or owner column.
+
+### Gate 6: `adoption_evidence_explicit`
+
+**Description:** §8 is not blank. It either contains adoption metrics (usage metrics with source, adoption rate with target base, adoption trend, support signal) or contains an explicit "Not applicable" statement for non-user-facing initiatives.
+
+**Failure condition:** §8 is blank, contains only placeholders, or partially addresses adoption without completing all required elements. "Not applicable" without justification is a failure.
 
 ---
 

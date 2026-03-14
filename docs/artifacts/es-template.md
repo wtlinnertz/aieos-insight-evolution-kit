@@ -126,7 +126,25 @@
 
 ---
 
-## 8. Freeze Declaration
+## 8. Adoption Evidence
+
+**Usage metrics:**
+
+| Metric | Value | Source | Measurement Method |
+|--------|-------|--------|-------------------|
+| {metric name} | {current value} | {data source} | {how measured} |
+
+**Adoption rate:** {X}% of {target user base definition} ({absolute numbers if available})
+
+**Adoption trend:** Increasing / Stable / Declining — {basis from coverage period data}
+
+**Support signal:** {Support ticket volume and categories related to this capability, or "No support data available — {reason}"}
+
+*If initiative has no user-facing capability: "Not applicable — initiative has no user-facing capability. {brief justification, e.g., 'backend infrastructure migration with no user-visible changes'}."*
+
+---
+
+## 9. Freeze Declaration
 
 This Evolution Signal has been generated from frozen input artifacts, reviewed for completeness and consistency with the input RHRs, and is ready for validation.
 
