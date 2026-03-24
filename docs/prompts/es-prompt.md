@@ -1,6 +1,6 @@
 # Evolution Signal Generation Prompt
 
-**Version:** 1.0
+**Version:** 1.1
 
 ## Role
 
@@ -19,6 +19,7 @@ Before generating, confirm the following inputs are present:
 
 **Optional:**
 - A frozen Value Hypothesis (VH) from the Product Intelligence Kit. If provided, §3 will be completed with metric-level assessment. If not provided, §3 must state "VH not provided; outcome assessment deferred."
+- ER §16 Impact Attribution data (if the initiative adopted impact attribution). If available, use it to enrich §7 Recommended Actions with execution pattern context. If not available, proceed normally — this input is purely additive.
 
 **If any required input is missing:** State what is missing. Do not proceed with generation using non-frozen or incomplete inputs.
 

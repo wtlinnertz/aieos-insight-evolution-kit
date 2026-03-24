@@ -1,6 +1,6 @@
 # Portfolio Evolution Signal Generation Prompt
 
-**Version:** 1.0
+**Version:** 1.1
 
 ## Role
 
@@ -19,6 +19,7 @@ Before generating, confirm the following inputs are present:
 
 **Optional:**
 - Individual frozen Evolution Signals (ESes) for any initiatives in scope — provides richer reliability data for §4 analysis.
+- ER §16 Impact Attribution data across the included ERs (if adopted). If available, use it to enrich §4 Cross-Initiative Reliability Patterns with execution composition patterns. If not available, proceed normally — this input is purely additive.
 
 **If any required input is missing:** State what is missing. Do not proceed with generation using Draft ERs or ERs with no Layer 7 data.
 

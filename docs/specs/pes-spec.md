@@ -1,6 +1,6 @@
 # Portfolio Evolution Signal Spec
 
-Version: v1.0
+Version: v1.1
 
 ## Purpose
 
@@ -38,6 +38,7 @@ The PES closes the cognitive loop: observed patterns → improvement proposals �
 ### Optional Inputs
 
 - **Individual frozen Evolution Signals (ESes)** for any initiatives in scope — to provide richer §4 reliability data than the ER summaries alone contain.
+- **ER §16 Impact Attribution data** across multiple ERs (if adopted) — for cross-initiative execution pattern analysis such as contribution concentration, role distribution across layers, and correlation between team composition patterns and initiative outcomes.
 
 ### What Does Not Belong Here
 
@@ -87,7 +88,7 @@ Analyze reliability outcomes across all initiatives where RHRs and ESes were pro
 Required subsections:
 1. **SLO miss pattern** — Which SLO types (Error Rate, Latency, Throughput, Delivery Rate, etc.) appear most frequently as misses across initiatives? Cite ER §5 or ES §4 data for each finding.
 2. **First-period vulnerability** — Do SLO misses cluster in the first RHR period (within 60 days of release)? Cite the ES data.
-3. **Architecture or operational correlations** — Are there patterns correlating architecture choices, team size, deployment practices, or service type with reliability degradation? Note explicitly if insufficient data.
+3. **Architecture or operational correlations** — Are there patterns correlating architecture choices, team size, deployment practices, or service type with reliability degradation? Note explicitly if insufficient data. If ER §16 data is available across multiple initiatives, note any correlations between contributor patterns (e.g., single-Primary vs. distributed contribution) and reliability outcomes. This is optional and advisory — absence of §16 data does not affect this subsection.
 4. **Root cause class frequencies** — Which incident root cause classes appear most often across incidents? Cite ER §5 IR data or ES §4.
 
 If fewer than 2 initiatives produced RHRs, state: "Reliability pattern analysis deferred — fewer than 2 initiatives have reliability data."
@@ -172,6 +173,7 @@ These criteria inform completeness score but do not affect pass/fail:
 - **Pattern quantification**: §3–§5 findings include counts or percentages, not just narrative descriptions.
 - **Cross-section coherence**: §6 proposals connect clearly to §3–§5 findings — the connection is explicit, not assumed.
 - **Amendment process reference**: Each §6 proposal references governance-model.md §15 as the next step.
+- **Cross-initiative execution patterns**: If ER §16 data is available across multiple initiatives, §4 notes correlations between contributor patterns and outcomes. If not available, this criterion does not apply.
 
 ---
 

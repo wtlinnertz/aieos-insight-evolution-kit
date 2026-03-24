@@ -1,6 +1,6 @@
 # Evolution Signal Spec
 
-Version: v1.1
+Version: v1.2
 
 ## Purpose
 
@@ -39,6 +39,7 @@ The ES closes the Layer 6 → Layer 7 → Layer 2 feedback loop.
 ### Optional Inputs
 
 - **A frozen Value Hypothesis (VH)** from the Product Intelligence Kit — for assessing whether original product bets were validated by production behavior. If not provided, §3 VH Outcome Assessment must explicitly state "VH not provided; outcome assessment deferred."
+- **ER §16 Impact Attribution data** (if adopted for the initiative) — for identifying execution patterns such as which roles or contribution levels correlate with artifact quality or reliability outcomes. If not available, this has no effect on the ES.
 
 ### Inputs That Do Not Belong Here
 
@@ -123,6 +124,8 @@ A table with at least one row. Columns: Action, Type (Operational / Discovery / 
 
 Owner may be "TBD" if not yet assigned.
 
+If ER §16 Impact Attribution data is available, the Rationale column may reference execution patterns observed (e.g., "artifacts with single-contributor Primary showed higher re-validation rates"). This is advisory context — it does not change the action type or owner assignment.
+
 ### §8 Adoption Evidence
 
 If the initiative delivered a user-facing capability, this section captures whether users actually adopted it. This is not a strategic assessment (that belongs in §3 VH Outcome) — it is an operational observation of usage patterns.
@@ -194,6 +197,7 @@ These criteria inform completeness score but do not affect pass/fail:
 - **Pattern specificity**: §5 patterns are named and described specifically, not vaguely (e.g., "database connection exhaustion during peak load" not "database issues").
 - **Action specificity**: §7 actions are concrete and actionable, not generic (e.g., "add alerting for connection pool at 80% capacity" not "improve monitoring").
 - **VH traceability**: §3 references specific SM-N identifiers from the VH, not paraphrased summaries.
+- **Execution pattern awareness**: If ER §16 Impact Attribution data is available, §7 actions reference relevant execution patterns where they inform the rationale. If ER §16 is not available, this criterion does not apply.
 
 ---
 

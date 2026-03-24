@@ -44,7 +44,9 @@ Before starting the ES generation session:
 
 3. **Optionally collect the frozen VH.** If the original discovery engagement produced a Value Hypothesis that has not yet been assessed in a prior ES, include it. The ES §3 VH Outcome Assessment maps VH success metrics to observed production data.
 
-4. **Confirm frozen status.** Every artifact cited in the ES §1 must be Frozen. Non-frozen artifacts are not valid inputs. If an RHR is not yet frozen, wait.
+4. **Optionally collect ER §16 Impact Attribution data.** If the initiative adopted impact attribution (per ER spec v1.6), this data provides execution pattern context for §7 Recommended Actions. It is not required — the ES is fully valid without it.
+
+5. **Confirm frozen status.** Every artifact cited in the ES §1 must be Frozen. Non-frozen artifacts are not valid inputs. If an RHR is not yet frozen, wait.
 
 **When to skip a VH:** If no VH was produced (initiative entered EEK directly via Path B), if the VH was already assessed in a prior ES, or if the VH does not apply to the current services, omit it. §3 must then state "VH not provided; outcome assessment deferred." This is not a failure — it is an explicit acknowledgment.
 
