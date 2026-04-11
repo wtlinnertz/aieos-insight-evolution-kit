@@ -1,4 +1,4 @@
-# Portfolio Evolution Signal — Worked Example
+# Portfolio Evolution Signal: Worked Example
 
 ## Scenario
 

@@ -8,7 +8,7 @@ This document explains how to use AI tools effectively with the Insight & Evolut
 
 Never run the ES generation prompt and ES validator in the same AI conversation session.
 
-**Why:** An AI session that generated content will defend that content. It will interpret ambiguous validator criteria in ways that favor the artifact it produced. This is not a bug — it is how language models work. Separation prevents self-validation bias.
+**Why:** An AI session that generated content will defend that content. It will interpret ambiguous validator criteria in ways that favor the artifact it produced. This is not a bug. It is how language models work. separation prevents self-validation bias.
 
 **How:**
 1. Session A: Run `es-prompt.md` with frozen inputs → get a draft ES
@@ -19,17 +19,16 @@ Never run the ES generation prompt and ES validator in the same AI conversation 
 
 This separation is a structural requirement, not a suggestion.
 
----
 
 ## Session Setup
 
 ### Generation Session
 
 Before running the generation prompt, load:
-1. `docs/prompts/es-prompt.md` — the generation prompt
-2. `docs/specs/es-spec.md` — the spec the prompt references
-3. `docs/artifacts/es-template.md` — the template the prompt follows
-4. All frozen RHRs being analyzed (minimum 2, full content — do not summarize)
+1. `docs/prompts/es-prompt.md`. the generation prompt
+2. `docs/specs/es-spec.md`. the spec the prompt references
+3. `docs/artifacts/es-template.md`. the template the prompt follows
+4. All frozen RHRs being analyzed (minimum 2, full content. Do not summarize)
 5. Optionally: the frozen Value Hypothesis (if applicable)
 
 Start the session with:
@@ -39,29 +38,27 @@ Start the session with:
 ### Validation Session
 
 Before running the validator, load:
-1. `docs/validators/es-validator.md` — the validator
-2. `docs/specs/es-spec.md` — the spec the validator references
+1. `docs/validators/es-validator.md`. the validator
+2. `docs/specs/es-spec.md`. the spec the validator references
 3. The draft ES (full content)
 
 Start the session with:
 
-> I need to validate this Evolution Signal. Evaluate it strictly against the spec and produce the JSON output exactly as specified. Do not suggest how to fix issues — only identify what is missing or insufficient per each hard gate.
+> I need to validate this Evolution Signal. Evaluate it strictly against the spec and produce the JSON output exactly as specified. Do not suggest how to fix issues. Only identify what is missing or insufficient per each hard gate.
 
----
 
 ## ES Session Pattern
 
 ### Full Flow
 
-1. **Collect frozen inputs** — confirm RHR status before starting
-2. **Generation session** — provide the prompt + spec + template + frozen RHRs (+ optional VH)
-3. **Human review** — check coverage summary accuracy, VH metric identifiers, re-entry signal consistency with trend data
-4. **Validation session** — provide validator + spec + draft ES → get JSON verdict
-5. **Fix blocking issues** if FAIL — return to generation session with specific blocking issue descriptions
-6. **Human approval** — product owner reviews the re-entry signal and §7 recommended actions
-7. **Freeze** — update Status to Frozen; store validator JSON output alongside the ES
+1. **Collect frozen inputs**. Confirm rhr status before starting
+2. **Generation session**. Provide the prompt + spec + template + frozen rhrs (+ optional vh)
+3. **Human review**. Check coverage summary accuracy, vh metric identifiers, re-entry signal consistency with trend data
+4. **Validation session**. Provide validator + spec + draft es → get json verdict
+5. **Fix blocking issues** if FAIL. Return to generation session with specific blocking issue descriptions
+6. **Human approval**. Product owner reviews the re-entry signal and §7 recommended actions
+7. **Freeze**. Update status to frozen; store validator json output alongside the es
 
----
 
 ## What to Do When the Validator Finds Blocking Issues
 
@@ -83,28 +80,26 @@ Start the session with:
 | `re_entry_signal_valid` | re-discover without discovery question | Add a specific discovery question to the §6 rationale |
 | `actions_present` | §7 has actions missing type or owner | Complete all four fields for each action row; owner may be TBD |
 
----
 
 ## Managing Input Volume
 
 Evolution Signals can have large inputs (2+ full RHRs, each potentially long). Tips for managing this:
 
 **Summarize what you can, not what you must not:**
-- RHR §4 Incident Summary: provide the full text — incident details matter for pattern analysis
-- RHR §5 Layer 7 Feed: provide the full text — this is the primary input for the ES
-- RHR §2 SLO Compliance: provide the full table — exact figures are needed for trend analysis
-- RHR §1 Document Control: provide the full section — frozen status and SRP references are checked
+- RHR §4 Incident Summary: provide the full text, incident details matter for pattern analysis
+- RHR §5 Layer 7 Feed: provide the full text: this is the primary input for the ES
+- RHR §2 SLO Compliance: provide the full table, exact figures are needed for trend analysis
+- RHR §1 Document Control: provide the full section, frozen status and SRP references are checked
 
 **What you can omit:**
 - RHR §3 Error Budget State (provide if available; the ES will use it if present)
 - Extended monitoring data or observability appendices not referenced in the RHR itself
 
 **Do not summarize:**
-- SLO compliance percentages — the trend analysis requires exact figures
-- Incident records — pattern analysis requires root cause details
-- VH success metrics — outcome assessment requires exact SM-N identifiers from the original VH
+- SLO compliance percentages: the trend analysis requires exact figures
+- Incident records, pattern analysis requires root cause details
+- VH success metrics, outcome assessment requires exact SM-N identifiers from the original VH
 
----
 
 ## What to Do When AI Struggles
 
@@ -117,9 +112,8 @@ The prompt includes selection criteria for each signal, but judgment is involved
 > The signal in §6 is `re-discover`, but the data shows only a 1-period miss with no persisting pattern. Please reconsider and re-render §6 with a `watch` signal and appropriate rationale.
 
 ### AI cannot find VH metrics in the RHR data
-This is correct behavior — the prompt marks VH metrics as "Insufficient Data" when production data is not available. Review whether the RHRs actually contain the data needed (e.g., a latency VH metric requires latency SLO data in the RHRs). If the data genuinely is not in the RHRs, Insufficient Data is the correct verdict.
+This is correct behavior. The prompt marks vh metrics as "insufficient data" when production data is not available. review whether the rhrs actually contain the data needed (e.g., a latency vh metric requires latency slo data in the rhrs). if the data genuinely is not in the rhrs, insufficient data is the correct verdict.
 
----
 
 ## When Not to Use AI
 

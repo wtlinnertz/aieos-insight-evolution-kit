@@ -1,12 +1,10 @@
 # aieos-insight-evolution-kit
 
-**Layer 7 of the AIEOS system** — Insight & Evolution.
+Layer 7 of the AIEOS system — Insight & Evolution.
 
-This kit synthesizes reliability health signals from production into actionable insights and closes the feedback loop to the Product Intelligence layer. It answers the question: **What did we learn and what changes?**
+This kit synthesizes reliability health signals from production into actionable insights and closes the feedback loop to the Product Intelligence layer. It answers: What did we learn and what changes?
 
----
-
-## What This Kit Does
+## What this kit does
 
 The Insight & Evolution Kit takes frozen Reliability Health Reports (from Layer 6) and an optional Value Hypothesis (from Layer 2), and produces an Evolution Signal that:
 
@@ -15,13 +13,11 @@ The Insight & Evolution Kit takes frozen Reliability Health Reports (from Layer 
 3. Determines whether the system should continue as-is, be watched, or trigger new discovery
 4. Produces recommended actions with owners
 
-The Evolution Signal closes the loop: Layer 7 → Layer 2 (Product Intelligence).
+The Evolution Signal closes the loop: Layer 7 to Layer 2 (Product Intelligence).
 
 The Portfolio Evolution Signal synthesizes patterns across multiple initiatives from their Engagement Records, producing cross-initiative improvement proposals for the governing artifact files.
 
----
-
-## Artifact Types
+## Artifact types
 
 ### Evolution Signal (ES)
 
@@ -45,9 +41,7 @@ Cross-initiative synthesis. Inputs: ≥2 frozen Engagement Records + optional in
 | `docs/prompts/pes-prompt.md` | Generation instructions |
 | `docs/validators/pes-validator.md` | Pass/fail evaluation |
 
----
-
-## Layer Position
+## Layer position
 
 ```
 Layer 6: Reliability & Resilience Kit
@@ -61,21 +55,15 @@ Layer 2: Product Intelligence Kit (if re-discover signal)
   Input: PIK intake recommendation from ES §7
 ```
 
----
-
-## When to Use This Kit
+## When to use this kit
 
 Run an Evolution Signal after accumulating at least 2 frozen RHRs for a service. Typical cadence: quarterly or after a significant reliability period.
 
-The ES is not time-pressure-driven — it is value-driven. Run it when there is enough data to assess reliability trends and evaluate whether the system is behaving as the value hypothesis predicted.
+The ES is not time-pressure-driven. It's value-driven. Run it when there's enough data to assess reliability trends and evaluate whether the system is behaving as the value hypothesis predicted.
 
----
-
-## Worked Example
+## Worked example
 
 `examples/basic-evolution/` — TaskFlow notification-service evolution signal after 2 RHR periods.
-
----
 
 ## Links
 

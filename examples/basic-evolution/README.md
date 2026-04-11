@@ -1,6 +1,6 @@
-# TaskFlow Notification Service — Evolution Signal Example
+# TaskFlow Notification Service: Evolution Signal Example
 
-This example demonstrates a complete Evolution Signal for the TaskFlow notification-service after two RHR periods.
+This example shows a complete Evolution Signal for the TaskFlow notification-service after two RHR periods.
 
 ---
 
