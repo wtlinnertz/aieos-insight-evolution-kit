@@ -41,6 +41,14 @@ Cross-initiative synthesis. Inputs: ≥2 frozen Engagement Records + optional in
 | `docs/prompts/pes-prompt.md` | Generation instructions |
 | `docs/validators/pes-validator.md` | Pass/fail evaluation |
 
+## Entry trigger
+
+IEK has no human-authored entry gate artifact. This is intentional. Engagement is triggered when ≥2 Reliability Health Reports are frozen for a service — an objective, quantitative condition. Human judgment is exercised at the ES freeze decision, not at kit entry. ES §1 confirms that all cited input artifacts are Frozen as the entry gate check.
+
+Unlike other kit transitions (which use a human-authored record like RER, SRER, QAER, or DCR), IEK does not require a separate entry authorization. An additional human-authored gate would duplicate the trigger check without adding governance value.
+
+> **PES bootstrap note:** The Portfolio Evolution Signal requires ≥2 frozen Engagement Records from ≥2 separate initiatives. PES is unavailable until at least two complete initiative cycles have run under AIEOS governance. This is by design — portfolio-level synthesis requires multiple data points.
+
 ## Layer position
 
 ```
