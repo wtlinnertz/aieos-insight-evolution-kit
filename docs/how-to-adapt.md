@@ -22,7 +22,6 @@ This document explains how to adopt the Insight & Evolution Kit in your organiza
 
 The structural rules are in `docs/governance-model.md`. They exist because the kit's value depends on them.
 
-
 ## Configuring the Feedback Loop Cadence
 
 The Evolution Signal is event-driven, not calendar-driven. The trigger is accumulating enough frozen RHRs to establish meaningful trends. Not the passage of time alone.
@@ -37,7 +36,6 @@ The Evolution Signal is event-driven, not calendar-driven. The trigger is accumu
 | Specific concern flagged in RHR §5 | After the next 2 periods following the concern flag |
 
 The minimum is always 2 RHRs. Running an ES with only 1 RHR is structurally invalid. You cannot detect trends from a single data point.
-
 
 ## Configuring Re-Entry Signal Thresholds
 
@@ -61,7 +59,6 @@ Document your thresholds in the `insight-evolution-principles.md` file. The ES p
 - Incident severity distribution shifted (more SEV2, fewer SEV3)
 - VH metric showing Insufficient Data for 2+ periods (data gap, not miss)
 
-
 ## Scoping: Single-Service vs. Portfolio
 
 ### Single-Service ES
@@ -81,7 +78,6 @@ Portfolio ESs are more complex and require more synthesis time. They are most va
 
 Do not merge services with fundamentally different operational characteristics into a single ES just for convenience. If service A is a high-traffic user-facing API and service B is a low-frequency batch processor, they warrant separate ESs. Portfolio ESs should synthesize services with meaningful comparative value.
 
-
 ## Integrating with the Product Intelligence Kit
 
 The feedback loop from Layer 7 to Layer 2 is advisory. If your organization uses PIK for discovery, the `re-discover` signal produces a discovery question that feeds the PIK Discovery Intake Form.
@@ -98,7 +94,6 @@ The feedback loop from Layer 7 to Layer 2 is advisory. If your organization uses
 
 **If your organization does not use PIK:**
 A `re-discover` signal means: a product owner should investigate whether a new initiative is warranted, using whatever discovery process your organization follows. The ES provides the evidence; the process is yours to define.
-
 
 ## Adapting the Principles File
 
