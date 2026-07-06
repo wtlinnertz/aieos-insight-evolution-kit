@@ -19,7 +19,6 @@ Never run the ES generation prompt and ES validator in the same AI conversation 
 
 This separation is a structural requirement, not a suggestion.
 
-
 ## Session Setup
 
 ### Generation Session
@@ -46,7 +45,6 @@ Start the session with:
 
 > I need to validate this Evolution Signal. Evaluate it strictly against the spec and produce the JSON output exactly as specified. Do not suggest how to fix issues. Only identify what is missing or insufficient per each hard gate.
 
-
 ## ES Session Pattern
 
 ### Full Flow
@@ -58,7 +56,6 @@ Start the session with:
 5. **Fix blocking issues** if FAIL. Return to generation session with specific blocking issue descriptions
 6. **Human approval**. Product owner reviews the re-entry signal and §7 recommended actions
 7. **Freeze**. Update status to frozen; store validator json output alongside the es
-
 
 ## What to Do When the Validator Finds Blocking Issues
 
@@ -80,7 +77,6 @@ Start the session with:
 | `re_entry_signal_valid` | re-discover without discovery question | Add a specific discovery question to the §6 rationale |
 | `actions_present` | §7 has actions missing type or owner | Complete all four fields for each action row; owner may be TBD |
 
-
 ## Managing Input Volume
 
 Evolution Signals can have large inputs (2+ full RHRs, each potentially long). Tips for managing this:
@@ -100,7 +96,6 @@ Evolution Signals can have large inputs (2+ full RHRs, each potentially long). T
 - Incident records, pattern analysis requires root cause details
 - VH success metrics, outcome assessment requires exact SM-N identifiers from the original VH
 
-
 ## What to Do When AI Struggles
 
 ### AI invents trend data
@@ -113,7 +108,6 @@ The prompt includes selection criteria for each signal, but judgment is involved
 
 ### AI cannot find VH metrics in the RHR data
 This is correct behavior. The prompt marks vh metrics as "insufficient data" when production data is not available. review whether the rhrs actually contain the data needed (e.g., a latency vh metric requires latency slo data in the rhrs). if the data genuinely is not in the rhrs, insufficient data is the correct verdict.
-
 
 ## When Not to Use AI
 
