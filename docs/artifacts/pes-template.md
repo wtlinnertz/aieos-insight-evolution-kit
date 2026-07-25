@@ -6,13 +6,14 @@
 
 | Field | Value |
 |-------|-------|
-| PES ID | PES-{NNN} |
+| Artifact ID | PES-{NNN} |
+| Owner | {owner} |
 | Initiative Scope | {list all initiative names included} |
 | ER References | {ER-XXX (Active), ER-XXX (Deprecated), ...} |
 | ES References | {ES-XXX (Frozen), ... or None} |
 | Analysis Period | {YYYY-MM-DD through YYYY-MM-DD} |
 | Author | AI-generated, human-reviewed |
-| Status | Draft |
+| Status | DRAFT |
 | Governance Model Version | 1.0 |
 | Prompt Version | {prompt version} |
 | Spec Version | {spec version} |
