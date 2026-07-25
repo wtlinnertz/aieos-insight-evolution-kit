@@ -6,13 +6,14 @@
 
 | Field | Value |
 |-------|-------|
-| ES ID | ES-{SCOPE}-{NNN} |
+| Artifact ID | ES-{SCOPE}-{NNN} |
+| Owner | {owner} |
 | Service(s) | {service name(s) covered} |
 | Coverage Period | {YYYY-MM-DD} through {YYYY-MM-DD} |
 | Input Artifacts | {list each: RHR-ID (Frozen), SRP-ID (Frozen), VH-ID (Frozen) if applicable} |
 | VH Reference | {VH-{PROJECT}-{NNN} — Frozen \| Not provided} |
 | Author | {author} |
-| Status | Draft / Validated / Freeze Pending / Frozen |
+| Status | DRAFT |
 | Governance Model Version | 1.0 |
 | Prompt Version | {prompt version} |
 | Spec Version | {spec version} |
